@@ -1,15 +1,13 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from marshmallow.fields import Integer
-from marshmallow_jsonapi import fields
-from marshmallow_jsonapi.flask import Relationship, Schema
-from sqlalchemy.orm import load_only
-
+from flask_sqlalchemy import SQLAlchemy 
+from flask_rest_jsonapi import Api
 
 #setting up flask app
 app = Flask(__name__)
 
-
+#setting up API and routing
+api = Api()
+api.route(TraitsList, 'traits_list', '/traits')
 
 #setting up SQL alchemy
 #The database URI that should be used for the connection.
