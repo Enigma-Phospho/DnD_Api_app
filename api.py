@@ -10,6 +10,7 @@ from sqlalchemy.orm import load_only
 app = Flask(__name__)
 
 
+
 #setting up SQL alchemy
 #The database URI that should be used for the connection.
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////party.db'
@@ -27,23 +28,11 @@ class Traits(db.Model):
     wisdom = db.Column(db.Integer)
     charisma = db.Column(db.Integer)
 
-# Logical Abstraction for build/trait data
-class TraitsSchema(Schema):
-    class Meta: 
-        type_ = 'Traits'
-        self_view = 'Traits_detail'
-        self_view_kwargs = {'id': '<id>'}
-        self_view_many = 'traits_list'
-    
-    id = fields.Integer(as_string=True, load_only=True)
-    clas = fields.String(required=True, load_only=True)
-    race = fields.String(required=True)
-    strength = fields.Integer(as_string=True, load_only=True)
-    dexterity = fields.Integer(as_string=True, load_only=True)
-    constitution = fields.Integer(as_string=True, load_only=True)
-    intelligence = fields.Integer(as_string=True, load_only=True)
-    wisdom = fields.Integer(as_string=True, load_only=True)
-    charisma = fields.Integer(as_string=True, load_only=True)
-    
+
+
+
+
 # create table
 db.create_all
+
+
