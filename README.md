@@ -1,5 +1,5 @@
 # DnD_Api_app
-A JSON API project that carries DnD builds for new players to sort through so they can immediately pick one up and start playing!
+A JSON API project that stores DnD builds for new players to sort through so they can immediately pick one up and start playing!
 I want to build this because it would give me some good practice for web app development and allow for me to make an api that people could connect to for their own
 Dnd related projects. 
 
